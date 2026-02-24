@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
+.Todsorbcode-container {
+    --primary-green: #97b897;
+    font-family: 'Fredoka', sans-serif;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--primary-green);
+}
+
+.Todsorbcode-nav-top {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.Todsorbcode-nav-btn {
+    background: #fff;
+    border: 2px solid var(--primary-green);
+    border-radius: 50px;
+    padding: 5px 25px;
+    color: var(--primary-green);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Todsorbcode-nav-btn:hover {
+    background: var(--primary-green);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.Todsorbcode-main-card {
+    background: #fff;
+    border: 3px solid var(--primary-green);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.05);
+}
+
+.Todsorbcode-title {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.Todsorbcode-image-space {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Todsorbcode-image-space img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    animation: Todsorbcode-bounce 3s ease-in-out infinite;
+}
+
+.Todsorbcode-menu-divider {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.Todsorbcode-menu-label {
+    border: 2px solid var(--primary-green);
+    border-radius: 50px;
+    padding: 5px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: #fff;
+}
+
+.Todsorbcode-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.Todsorbcode-sub-card {
+    text-align: center;
+}
+
+.Todsorbcode-card-img {
+    aspect-ratio: 1;
+    border: 2px solid var(--primary-green);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.Todsorbcode-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Todsorbcode-sub-card:hover .Todsorbcode-card-img {
+    transform: translateY(-5px) rotate(2deg);
+}
+
+.Todsorbcode-card-title {
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.Todsorbcode-dots {
+    font-size: .8rem;
+    letter-spacing: -1px;
+    opacity: .6;
+}
+
+@keyframes Todsorbcode-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
