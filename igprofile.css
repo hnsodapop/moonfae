@@ -1,0 +1,204 @@
+:root {
+    --ig-bg: #fdf6ec;
+    --ig-line: #e9dcc9;
+    --ig-text: #8b7355;
+    --ig-gold: #d4a373;
+}
+
+.igprofile-root {
+    background: var(--ig-bg);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: serif;
+}
+
+.igprofile-card {
+    width: 100%;
+    max-width: 450px;
+    background: #fffaf3;
+    border: 2px solid var(--ig-line);
+    border-radius: 40px;
+    padding: 30px 15px;
+    color: var(--ig-text);
+    box-shadow: 0 10px 25px rgba(233, 220, 201, 0.5);
+}
+
+.igprofile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0 20px;
+}
+
+.igprofile-avatar-wrap {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 1px solid var(--ig-line);
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+.igprofile-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #eee;
+}
+
+.igprofile-stats {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    padding-left: 10px;
+}
+
+.igprofile-stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.igprofile-stat-item b {
+    display: block;
+    font-size: 18px;
+    color: var(--ig-gold);
+    line-height: 1.2;
+}
+
+.igprofile-stat-item span {
+    font-size: 11px;
+    color: #a08d75;
+}
+
+.igprofile-name-box {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.igprofile-name {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.igprofile-subtitle {
+    font-size: 14px;
+    color: var(--ig-gold);
+    font-style: italic;
+}
+
+.igprofile-bio {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 8px;
+    color: #a08d75;
+}
+
+.igprofile-btn-main {
+    background: var(--ig-gold);
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    border-radius: 12px;
+    margin: 0 20px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.igprofile-btn-row {
+    display: flex;
+    gap: 8px;
+    padding: 0 20px;
+    margin-bottom: 25px;
+}
+
+.igprofile-btn-sub {
+    flex: 1;
+    border: 1px solid var(--ig-line);
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.igprofile-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 10px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--ig-line);
+}
+
+.igprofile-hl-item {
+    text-align: center;
+    width: 65px;
+}
+
+.igprofile-hl-item span {
+    font-size: 10px;
+}
+
+.igprofile-hl-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid var(--ig-line);
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    overflow: hidden;
+}
+
+.igprofile-hl-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.igprofile-auto-gallery {
+    margin: 0 20px 20px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid var(--ig-line);
+}
+
+.igprofile-auto-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: ig-fade 12s infinite ease-in-out;
+}
+
+.igprofile-auto-slide:nth-child(1) { background-image: url('https://i.pinimg.com/736x/b4/4f/78/b44f78b6017f51626ea2b224fe22de5c.jpg'); animation-delay: 0s; }
+.igprofile-auto-slide:nth-child(2) { background-image: url('https://i.pinimg.com/736x/d6/6d/31/d66d31514911a48553da6834c53aa971.jpg'); animation-delay: 4s; }
+.igprofile-auto-slide:nth-child(3) { background-image: url('https://i.pinimg.com/736x/b0/23/5e/b0235e14845b3e018f3f35fa2192546b.jpg'); animation-delay: 8s; }
+
+@keyframes ig-fade {
+    0%, 10% { opacity: 0; }
+    20%, 40% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+.igprofile-footer {
+    text-align: center;
+    font-size: 9px;
+    opacity: 0.4;
+    letter-spacing: 1px;
+    border-top: 1px solid var(--ig-line);
+    padding-top: 15px;
+}
