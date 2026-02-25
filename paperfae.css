@@ -1,12 +1,4 @@
-:root {
-    --paperfae-bg-main: #fff9f5;
-    --paperfae-line-color: rgba(141, 110, 99, 0.1);
-    --paperfae-color-name: #6d4c41;
-    --paperfae-color-text: #6d4c41;
-    --paperfae-color-note: #8d6e63;
-    --paperfae-tape-color: rgba(244, 143, 177, 0.5);
-}
-
+/* Container หลัก */
 .paperfae-container {
     max-width: 650px;
     margin: 20px auto;
@@ -17,26 +9,23 @@
     width: 100%;
     box-sizing: border-box;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
     position: relative;
     background-color: var(--paperfae-bg-main);
     background-image: linear-gradient(var(--paperfae-line-color) 1px, transparent 1px),
                       linear-gradient(90deg, var(--paperfae-line-color) 1px, transparent 1px);
     background-size: 25px 25px;
+
+    /* Variables */
+    --paperfae-bg-main: #fff9f5;
+    --paperfae-line-color: rgba(141,110,99,0.1);
+    --paperfae-color-name: #6d4c41;
+    --paperfae-color-text: #6d4c41;
+    --paperfae-color-note: #8d6e63;
+    --paperfae-tape-color: rgba(244,143,177,0.5);
 }
 
-/* Animations */
-@keyframes paperfae-marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-@keyframes paperfae-float {
-    0%, 100% { transform: translateY(0) rotate(var(--r)); }
-    50% { transform: translateY(-8px) rotate(var(--r)); }
-}
-
-/* Scroller Section */
+/* Scroller & Animation */
 .paperfae-scroller {
     display: flex;
     width: max-content;
@@ -44,6 +33,12 @@
     padding: 15px 0;
 }
 
+@keyframes paperfae-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Polaroid Card */
 .paperfae-polaroid {
     position: relative;
     width: 150px;
@@ -51,10 +46,9 @@
     flex-shrink: 0;
     background: #fff;
     padding: 10px 10px 30px 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
     border-radius: 2px;
     animation: paperfae-float 4s ease-in-out infinite;
-    animation-delay: var(--delay);
 }
 
 .paperfae-polaroid img {
@@ -64,6 +58,12 @@
     border-radius: 1px;
 }
 
+@keyframes paperfae-float {
+    0%, 100% { transform: translateY(0) rotate(var(--r)); }
+    50% { transform: translateY(-8px) rotate(var(--r)); }
+}
+
+/* Tape Deco */
 .paperfae-tape-mini {
     position: absolute;
     background: var(--paperfae-tape-color);
@@ -76,8 +76,8 @@
     border-radius: 1px;
 }
 
-/* Content Section */
-.paperfae-content-wrapper {
+/* Content Area */
+.paperfae-content {
     max-width: 750px;
     margin: 30px auto 0;
     padding: 0 50px;
@@ -95,7 +95,7 @@
 }
 
 .paperfae-subtitle {
-    color: var(--paperfae-color-note);
+    color: #8d6e63;
     line-height: 1;
     font-size: 13px;
     margin: 2px 0 25px 0;
@@ -103,7 +103,7 @@
     opacity: 0.8;
 }
 
-.paperfae-text-body {
+.paperfae-body-text {
     color: var(--paperfae-color-text);
     line-height: 1.8;
     font-size: 16px;
@@ -112,8 +112,8 @@
     padding: 0 10px;
 }
 
-/* Footer Section */
-.paperfae-footer-image {
+/* Footer Image & Button */
+.paperfae-footer {
     width: 100%;
     height: 200px;
     margin-top: 0px;
@@ -122,7 +122,7 @@
     line-height: 0;
 }
 
-.paperfae-mask-img {
+.paperfae-footer-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -130,25 +130,24 @@
     mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
 }
 
-.paperfae-button {
+.paperfae-btn {
     position: absolute;
     right: 30px;
     bottom: 35px;
     display: inline-block;
-    border: 1px solid rgba(141, 110, 99, 0.15);
+    border: 1px solid rgba(141,110,99,0.15);
     color: var(--paperfae-color-note);
     padding: 12px 30px;
     text-decoration: none;
     border-radius: 2px;
     font-size: 14px;
     letter-spacing: 1px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255,255,255,0.6);
     transition: 0.3s;
     font-weight: normal;
     z-index: 10;
 }
 
-.paperfae-button:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: translateY(-2px);
+.paperfae-btn:hover {
+    background: rgba(255,255,255,0.9);
 }
