@@ -1,0 +1,226 @@
+/* นำเข้าฟอนต์ */
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Mali:wght@300;400;500&family=Poppins:wght@300;400;600&family=Pangolin&display=swap');
+
+:root {
+    --p-bg: #fdf5f5;
+    --p-main: #f8d7da;
+    --p-dark: #755c5c;
+    --p-text: #6b5e5e;
+    --p-soft: #fff0f0;
+    --p-white: #ffffff;
+}
+
+.newfaeprofile-con {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: var(--p-bg);
+    font-family: 'Mali', cursive;
+    color: var(--p-text);
+    line-height: 1.7;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--p-main);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+}
+
+.newfaeprofile-head {
+    height: 280px;
+    background: url('https://i.pinimg.com/1200x/18/07/cf/1807cfd9a4dff8e365a311c0f132e0ae.jpg') center/cover;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+}
+
+.newfaeprofile-title {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px 35px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--p-main);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.newfaeprofile-title h1 {
+    font-family: 'Pangolin', cursive;
+    font-size: 3.2rem;
+    margin: 0;
+    color: var(--p-dark);
+    letter-spacing: 1px;
+}
+
+.newfaeprofile-title-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    color: var(--p-dark);
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.newfaeprofile-main {
+    padding: 40px;
+}
+
+.newfaeprofile-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+    background: var(--p-soft);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.newfaeprofile-item {
+    text-align: center;
+}
+
+.newfaeprofile-item b {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--p-dark);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.newfaeprofile-item span {
+    font-size: 0.85rem;
+}
+
+.newfaeprofile-flex {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.newfaeprofile-box {
+    background: var(--p-white);
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.newfaeprofile-box-t {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: var(--p-dark);
+    margin-bottom: 15px;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-left: 4px solid var(--p-main);
+    padding-left: 15px;
+}
+
+.newfaeprofile-bio-scroll {
+    height: 250px;
+    overflow-y: auto;
+    padding-right: 15px;
+    font-size: 0.85rem;
+    text-align: justify;
+    color: var(--p-text);
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    transition: 0.3s;
+}
+
+.newfaeprofile-bio-scroll:hover {
+    scrollbar-color: var(--p-main) transparent;
+}
+
+.newfaeprofile-bio-scroll::-webkit-scrollbar {
+    width: 3px;
+}
+
+.newfaeprofile-bio-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.newfaeprofile-bio-scroll::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.newfaeprofile-bio-scroll:hover::-webkit-scrollbar-thumb {
+    background-color: var(--p-main);
+    border-radius: 10px;
+}
+
+.newfaeprofile-pic-g {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.newfaeprofile-img {
+    height: 180px;
+    border-radius: 12px;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.newfaeprofile-img:hover {
+    transform: scale(1.02);
+}
+
+.newfaeprofile-rel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.newfaeprofile-rel-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: var(--p-white);
+    border-radius: 12px;
+    border: 1px solid #fceef0;
+    transition: 0.3s;
+}
+
+.newfaeprofile-rel-card:hover {
+    background: var(--p-soft);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.02);
+}
+
+.newfaeprofile-rel-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--p-main);
+}
+
+.newfaeprofile-rel-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.newfaeprofile-rel-n {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--p-dark);
+    font-family: 'Poppins', sans-serif;
+}
+
+.newfaeprofile-rel-r {
+    font-size: 0.7rem;
+    color: var(--p-text);
+    opacity: 0.8;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
