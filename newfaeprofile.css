@@ -10,6 +10,15 @@
     --p-white: #ffffff;
 }
 
+/* --- ส่วนที่ใช้แก้รูปเฮด --- */
+.newfaeprofile-bg-image {
+    /* เปลี่ยน URL รูปภาพตรงนี้ */
+    background-image: url('https://i.pinimg.com/1200x/18/07/cf/1807cfd9a4dff8e365a311c0f132e0ae.jpg');
+    background-position: center;
+    background-size: cover;
+}
+/* -------------------------- */
+
 .newfaeprofile-con {
     max-width: 1000px;
     margin: 20px auto;
@@ -25,7 +34,6 @@
 
 .newfaeprofile-head {
     height: 280px;
-    background: url('https://i.pinimg.com/1200x/18/07/cf/1807cfd9a4dff8e365a311c0f132e0ae.jpg') center/cover;
     position: relative;
     display: flex;
     align-items: flex-end;
