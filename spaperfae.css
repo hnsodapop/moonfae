@@ -44,7 +44,10 @@
   width: 150px;
   margin: 0 15px;
   flex-shrink: 0;
-  background: #ffffff;
+  
+  /* --- เปลี่ยนสีตรงนี้ได้ --- */
+  background: var(--border); 
+  
   padding: 10px 10px 30px 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
   border-radius: 2px;
