@@ -1,0 +1,225 @@
+/* --- Buddyletisia: Custom Variables (แก้ไขตรงนี้เพื่อเปลี่ยนสี/รูป) --- */
+:root {
+    --bl-primary-color: #ffccd5;
+    --bl-secondary-color: #ffb3c1;
+    --bl-text-color: #555555;
+    --bl-accent-color: #ff8fa3;
+    --bl-bg-color: #ffffff;
+    --bl-wrapper-bg: #fffcfc;
+    --bl-header-img: url('https://i.pinimg.com/736x/aa/90/6f/aa906f113a57641624686b315ad1a18a.jpg');
+    --bl-profile-img: url('https://i.pinimg.com/736x/7b/49/73/7b497352b56f4ce49ada80e5f8eeae64.jpg');
+    --bl-font-family: sans-serif;
+    --bl-online-color: #34c759;
+}
+
+/* --- Buddyletisia: Main Container --- */
+.Buddyletisia-container {
+    width: 600px;
+    margin: 100px auto 20px auto;
+    background: var(--bl-bg-color);
+    border: 1px solid var(--bl-primary-color);
+    border-radius: 25px;
+    padding: 0;
+    text-align: center;
+    font-family: var(--bl-font-family);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3), 0 0 30px 10px rgba(255, 182, 193, 0.2);
+    overflow: hidden;
+}
+
+/* --- Buddyletisia: Header Image --- */
+.Buddyletisia-header {
+    width: 100%;
+    height: 150px;
+    background-image: var(--bl-header-img);
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+/* --- Buddyletisia: Top Decorator Dots --- */
+.Buddyletisia-dots {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 6px;
+    z-index: 10;
+}
+
+.Buddyletisia-dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--bl-secondary-color);
+    border-radius: 50%;
+}
+
+/* --- Buddyletisia: Profile Picture --- */
+.Buddyletisia-profile-wrapper {
+    width: 160px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.Buddyletisia-profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--bl-primary-color);
+    background-image: var(--bl-profile-img);
+    background-size: cover;
+}
+
+/* --- Buddyletisia: Content Area --- */
+.Buddyletisia-content {
+    padding: 100px 25px 25px 25px;
+}
+
+/* --- Buddyletisia: Typing Effect --- */
+.Buddyletisia-typing {
+    background: linear-gradient(90deg, rgba(255, 240, 243, 0) 0%, rgba(255, 240, 243, 1) 50%, rgba(255, 240, 243, 0) 100%);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: var(--bl-accent-color);
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    animation: bl-typing 5s steps(40, end) infinite;
+}
+
+.Buddyletisia-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: var(--bl-accent-color);
+    margin-left: 2px;
+    vertical-align: middle;
+    animation: bl-blink-caret 0.75s step-end infinite;
+}
+
+/* --- Buddyletisia: Status --- */
+.Buddyletisia-status {
+    color: #888;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.Buddyletisia-status-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--bl-online-color);
+    border-radius: 50%;
+    display: inline-block;
+    animation: bl-pulse 1.5s infinite;
+}
+
+/* --- Buddyletisia: Roleplay Text --- */
+.Buddyletisia-rp-box {
+    border: 1px solid var(--bl-primary-color);
+    border-radius: 15px;
+    padding: 20px;
+    color: var(--bl-text-color);
+    text-align: left;
+    min-height: 100px;
+    background: var(--bl-wrapper-bg);
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 5px rgba(255, 182, 193, 0.1);
+}
+
+/* --- Buddyletisia: Tags --- */
+.Buddyletisia-tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.Buddyletisia-tag {
+    background: var(--bl-bg-color);
+    color: var(--bl-accent-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid var(--bl-primary-color);
+    box-shadow: 2px 2px 5px rgba(255, 182, 193, 0.2);
+}
+
+/* --- Buddyletisia: Note Section --- */
+.Buddyletisia-note-container {
+    width: 600px;
+    margin: 0 auto 100px auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--bl-primary-color);
+    padding: 20px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.2);
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Buddyletisia-note-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bl-header-img);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.Buddyletisia-note-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Keyframes --- */
+@keyframes bl-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(52, 199, 89, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(52, 0, 0, 0); }
+}
+
+@keyframes bl-typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes bl-blink-caret {
+    from, to { background-color: transparent; }
+    50% { background-color: var(--bl-accent-color); }
+}
