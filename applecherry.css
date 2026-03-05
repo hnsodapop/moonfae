@@ -93,8 +93,10 @@
 }
 
 .applecherry-deco-icon {
+    /* --- จุดที่แก้ไข: เพิ่ม max-width --- */
     width: 15%;
-    max-width: 60px;
+    max-width: 60px; 
+    /* --------------------------------- */
 }
 
 .applecherry-main-box {
