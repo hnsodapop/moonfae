@@ -1,0 +1,160 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Mali:wght@400;700&display=swap');
+
+/* Animations */
+@keyframes redcherry-morphing {
+    0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+}
+
+/* Main Container */
+.redcherry-wrapper {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Gaegu', 'Mali', sans-serif;
+}
+
+.redcherry-card {
+    max-width: 800px;
+    width: 95%;
+    background: #8E1C1C;
+    border-radius: 40px;
+    margin: 0 auto;
+    color: #FFF5E1;
+    box-sizing: border-box;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header Background with Mask */
+.redcherry-header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-image: url('https://i.pinimg.com/736x/a8/79/78/a87978a97fa5a1a4732d4169e8452c80.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%);
+}
+
+.redcherry-content-inner {
+    position: relative;
+    z-index: 2;
+    padding: 40px 6% 0;
+}
+
+/* Profile Section */
+.redcherry-profile-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: clamp(15px, 4vw, 30px);
+    flex-wrap: wrap;
+}
+
+.redcherry-morph-profile {
+    width: clamp(100px, 22vw, 160px);
+    height: clamp(100px, 22vw, 160px);
+    object-fit: cover;
+    border: 5px solid #FFF5E1;
+    animation: redcherry-morphing 6s ease-in-out infinite;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.redcherry-title {
+    font-size: clamp(35px, 9vw, 80px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 0.9;
+    margin-bottom: 8px;
+    color: #FFF5E1;
+}
+
+.redcherry-subtitle {
+    font-size: clamp(14px, 3.5vw, 22px);
+    line-height: 1.2;
+    opacity: 0.9;
+    color: #FFF5E1;
+}
+
+/* Decorative Flowers */
+.redcherry-flower-container {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.redcherry-flower-icon {
+    width: 15%;
+    max-width: 60px;
+}
+
+/* Content Box */
+.redcherry-text-box {
+    background: #FFF5E1;
+    width: 100%;
+    border-radius: 40px;
+    padding: 35px 35px 25px;
+    box-sizing: border-box;
+    text-align: left;
+    color: #5A1212;
+    border: 6px dashed #8E1C1C;
+    position: relative;
+}
+
+.redcherry-main-text {
+    font-size: 16px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    font-family: 'Mali', cursive;
+    margin-bottom: 15px;
+}
+
+/* Footer & Table */
+.redcherry-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+.redcherry-tag {
+    background: #8E1C1C;
+    color: #FFF5E1;
+    padding: 6px 15px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.redcherry-footer-img {
+    width: 100%;
+    max-width: 120px;
+    display: block;
+    margin-left: auto;
+}
+
+.redcherry-footer-name {
+    margin: 25px 0;
+    font-size: clamp(20px, 5vw, 32px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 3px;
+    color: #FFF5E1;
+    text-align: center;
+}
+
+.redcherry-spacer {
+    height: 30px;
+}
