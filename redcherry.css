@@ -1,161 +1,63 @@
-/* RedCherry Theme Framework 
-   Customizable via CSS Variables
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Mali:wght@400;700&display=swap');
 
 :root {
-    /* Colors */
-    --rc-primary: #8E1C1C;
-    --rc-secondary: #FFF5E1;
-    --rc-text-on-dark: #FFF5E1;
-    --rc-text-on-light: #5A1212;
-    --rc-shadow: rgba(0, 0, 0, 0.3);
-
-    /* Assets */
-    --rc-banner: url('https://i.pinimg.com/736x/a8/79/78/a87978a97fa5a1a4732d4169e8452c80.jpg');
-    --rc-profile: url('https://i.pinimg.com/736x/a0/c6/75/a0c6756cf974ddaa6601bda62992cb1e.jpg');
-    --rc-icon: url('https://img2.pic.in.th/7349-flower147756e97e0ee8a4.gif');
-    --rc-footer-deco: url('https://img5.pic.in.th/file/secure-sv1/image3753f41fa7a2beff.png');
-
-    /* Sizes */
-    --rc-card-max-width: 800px;
+    --redcherry-main: #8E1C1C;
+    --redcherry-soft: #FFF5E1;
+    --redcherry-font: 'Gaegu', 'Mali', sans-serif;
 }
 
-/* Animations */
-@keyframes redcherry-morph {
+@keyframes rc-morph {
     0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
     50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
 }
 
-/* Base Styles */
 .redcherry-wrapper {
-    text-align: center;
-    padding: 20px 10px;
-    font-family: 'Gaegu', 'Mali', sans-serif;
-    line-height: 1.5;
+    display: flex; justify-content: center; padding: 20px; font-family: var(--redcherry-font);
 }
 
 .redcherry-card {
-    max-width: var(--rc-card-max-width);
-    width: 100%;
-    background: var(--rc-primary);
-    border-radius: 40px;
-    margin: 0 auto;
-    color: var(--rc-text-on-dark);
-    box-sizing: border-box;
-    box-shadow: 0 25px 50px var(--rc-shadow);
-    position: relative;
-    overflow: hidden;
+    max-width: 800px; width: 100%; background: var(--redcherry-main); border-radius: 40px;
+    position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
-/* Header & Banner */
-.redcherry-header-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    background: var(--rc-banner) center/cover;
-    z-index: 1;
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, transparent 100%);
+/* ส่วนหัวแบนเนอร์ */
+.redcherry-banner {
+    position: absolute; top: 0; left: 0; width: 100%; height: 280px;
+    object-fit: cover; z-index: 1; opacity: 0.4;
+    mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
 }
 
-.redcherry-content {
-    position: relative;
-    z-index: 2;
-    padding: 40px 6% 0;
-}
+.redcherry-body { position: relative; z-index: 2; padding: 40px 5% 20px; }
 
-/* Profile Section */
-.redcherry-profile-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    gap: 25px;
-    flex-wrap: wrap;
-}
+/* Profile */
+.redcherry-profile-box { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center; text-align: left; }
 
 .redcherry-avatar {
-    width: clamp(100px, 20vw, 160px);
-    height: clamp(100px, 20vw, 160px);
-    background: var(--rc-profile) center/cover;
-    border: 5px solid var(--rc-secondary);
-    animation: redcherry-morph 6s ease-in-out infinite;
-    box-shadow: 0 10px 20px var(--rc-shadow);
+    width: 150px; height: 150px; object-fit: cover; border: 5px solid var(--redcherry-soft);
+    animation: rc-morph 6s ease-in-out infinite; box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-.redcherry-name-group h1 {
-    font-size: clamp(35px, 8vw, 70px);
-    margin: 0;
-    line-height: 0.9;
+.redcherry-info h2 { font-size: 60px; color: var(--redcherry-soft); margin: 0; line-height: 1; }
+.redcherry-info p { color: var(--redcherry-soft); opacity: 0.9; margin: 5px 0 0; font-size: 18px; }
+
+/* Icons */
+.redcherry-divider { margin: 25px 0; display: flex; justify-content: center; gap: 10px; }
+.redcherry-icon { width: 50px; height: 50px; object-fit: contain; }
+
+/* Text Area */
+.redcherry-content-box {
+    background: var(--redcherry-soft); border-radius: 35px; padding: 30px;
+    color: #5A1212; border: 6px dashed var(--redcherry-main); text-align: left;
 }
 
-.redcherry-name-group p {
-    font-size: clamp(14px, 3vw, 20px);
-    opacity: 0.9;
-    margin: 5px 0 0;
-}
+.redcherry-main-text { min-height: 80px; font-size: 18px; margin-bottom: 15px; font-family: 'Mali', sans-serif; }
 
-/* Icons Line */
-.redcherry-divider {
-    margin: 30px 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.redcherry-icon {
-    width: 45px;
-    height: 45px;
-    background: var(--rc-icon) center/contain no-repeat;
-}
-
-/* Main Message Box */
-.redcherry-box {
-    background: var(--rc-secondary);
-    border-radius: 35px;
-    padding: 35px;
-    color: var(--rc-text-on-light);
-    border: 6px dashed var(--rc-primary);
-    text-align: left;
-}
-
-.redcherry-text {
-    font-family: 'Mali', cursive;
-    font-size: 17px;
-    min-height: 100px;
-    margin-bottom: 20px;
-    white-space: pre-wrap;
-}
-
-/* Footer Element */
-.redcherry-footer-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
+.redcherry-footer-inner { display: flex; justify-content: space-between; align-items: flex-end; }
 .redcherry-tag {
-    background: var(--rc-primary);
-    color: var(--rc-text-on-dark);
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 14px;
+    background: var(--redcherry-main); color: var(--redcherry-soft); padding: 5px 15px;
+    border-radius: 20px; font-weight: bold; font-size: 14px;
 }
+.redcherry-small-deco { width: 100px; height: auto; }
 
-.redcherry-deco-img {
-    width: 100px;
-    height: 80px;
-    background: var(--rc-footer-deco) bottom right/contain no-repeat;
-}
-
-.redcherry-signature {
-    margin: 30px 0;
-    font-size: clamp(24px, 5vw, 36px);
-    letter-spacing: 4px;
-    font-weight: 700;
-}
+.redcherry-sign { margin-top: 25px; color: var(--redcherry-soft); font-size: 30px; font-weight: bold; letter-spacing: 2px; text-align: center; }
