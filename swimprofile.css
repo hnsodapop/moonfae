@@ -1,4 +1,6 @@
-/* Container & Background */
+/* คัดลอกทั้งหมดนี้ไปทับในไฟล์ swimprofile.css */
+.swimprofile-container, .swimprofile-container * { box-sizing: border-box; }
+
 .swimprofile-container {
     margin: 0 auto;
     width: 100%;
@@ -10,7 +12,7 @@
     overflow: hidden;
     box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
     font-family: 'Bai Jamjuree', sans-serif;
-    box-sizing: border-box;
+    line-height: 1.5;
 }
 
 .swimprofile-overlay {
@@ -31,7 +33,6 @@
     text-align: center;
 }
 
-/* Video Section */
 .swimprofile-video-wrapper {
     display: block;
     margin: 0 auto;
@@ -41,7 +42,6 @@
     box-shadow: 0 15px 50px rgba(0,0,0,0.3);
     position: relative;
     overflow: hidden;
-    border: none;
 }
 
 .swimprofile-video-inner {
@@ -51,16 +51,12 @@
     width: 700px;
     height: 500px;
     transform: translate(-50%, -50%);
-    border-radius: 50%;
-    overflow: hidden;
 }
 
 .swimprofile-video-inner iframe {
     width: 100%;
     height: 100%;
-    display: block;
     border: none;
-    border-radius: 50%;
 }
 
 .swimprofile-video-frame {
@@ -74,7 +70,6 @@
     z-index: 10;
 }
 
-/* Navigation */
 .swimprofile-nav {
     margin-top: 40px;
     display: inline-flex;
@@ -85,22 +80,19 @@
     border: 1px solid rgba(255,255,255,0.1);
     gap: 25px;
     align-items: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
 .swimprofile-nav a {
-    color: #fff;
-    text-decoration: none;
+    color: #fff !important;
+    text-decoration: none !important;
     font-size: 14px;
     letter-spacing: 1px;
     transition: 0.3s;
-    font-weight: 400;
 }
 
 .swimprofile-nav a:hover {
     color: #89d4ff !important;
     text-shadow: 0 0 10px #89d4ff;
-    transform: scale(1.05);
 }
 
 .swimprofile-divider {
@@ -109,13 +101,11 @@
     background: rgba(255,255,255,0.2);
 }
 
-/* Typography */
 .swimprofile-heart {
     margin: 40px auto 0;
     font-size: 45px;
     color: #fff;
-    text-shadow: 0 0 10px #fff, 0 0 20px #89d4ff, 0 0 30px #89d4ff;
-    opacity: 0.9;
+    text-shadow: 0 0 10px #fff, 0 0 20px #89d4ff;
 }
 
 .swimprofile-subtitle {
@@ -123,23 +113,11 @@
     color: #fff;
     letter-spacing: 4px;
     text-transform: uppercase;
-    text-shadow: 0 0 5px #89d4ff;
     font-weight: 600;
-    margin-top: 5px;
 }
 
-.swimprofile-name {
-    font-family: 'Beth Ellen', cursive;
-    font-size: 24px;
-    margin: 0 0 15px;
-    color: #fff;
-}
-
-/* Info Boxes */
 .swimprofile-info-body {
     margin-top: 60px;
-    text-align: left;
-    color: #fff;
     padding: 0 30px;
 }
 
@@ -152,21 +130,17 @@
     margin-left: auto;
     text-align: right;
     margin-bottom: 20px;
-    border: none;
-    transition: transform 0.5s ease;
-    cursor: default;
+    transition: 0.5s;
 }
 
-.swimprofile-details {
-    font-size: 16px;
-    line-height: 1.6;
-    color: rgba(255,255,255,0.9);
+.swimprofile-name {
+    font-family: 'Beth Ellen', cursive;
+    font-size: 24px;
+    margin: 0 0 15px;
+    color: #fff;
 }
 
-.swimprofile-label {
-    color: #89d4ff;
-    font-weight: 600;
-}
+.swimprofile-label { color: #89d4ff; font-weight: 600; }
 
 .swimprofile-quote {
     font-size: 15px;
@@ -177,7 +151,6 @@
     color: rgba(255,255,255,0.6);
 }
 
-/* Mood Box Specific */
 .swimprofile-mood {
     padding: 40px;
     margin-bottom: 100px;
@@ -192,86 +165,37 @@
     position: absolute;
     top: -360px;
     left: -80px;
-    width: 600px;
-    height: auto;
+    width: 600px !important; /* บังคับขนาดรูปปลา */
+    height: auto !important;
     z-index: 15;
     pointer-events: none;
-}
-
-.swimprofile-mood-text {
-    width: 100%;
-    max-width: 420px;
-    text-align: right;
-}
-
-.swimprofile-status {
-    font-size: 18px;
-    color: #89d4ff;
-    font-weight: 600;
-}
-
-.swimprofile-sub-quote {
-    font-size: 14px;
-    color: rgba(255,255,255,0.6);
-    line-height: 1.6;
 }
 
 .swimprofile-line {
     margin-top: 15px;
     height: 2px;
     background: linear-gradient(to right, transparent, #89d4ff);
-    width: 100%;
 }
 
-.swimprofile-footer {
-    text-align: center;
-    font-size: 10px;
-    color: rgba(255,255,255,0.3);
-    letter-spacing: 2px;
-    text-transform: lowercase;
-    font-weight: 300;
-    margin-top: 20px;
-}
-
-/* Animations */
 .swimprofile-particles {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 5;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 5;
 }
 
-.swimprofile-particle {
-    position: absolute;
-    bottom: -100px;
-    opacity: 0.8;
-}
+.swimprofile-particle { position: absolute; bottom: -100px; }
+.swimprofile-particle img { width: 100% !important; height: auto !important; filter: drop-shadow(0 0 5px #89d4ff); }
 
-.swimprofile-particle img {
-    filter: drop-shadow(0 0 5px #89d4ff);
-}
+.p1 { left: 10%; animation: swim-b 15s infinite; width: 60px; }
+.p2 { left: 40%; animation: swim-b 12s 2s infinite; width: 40px; opacity: 0.7; }
+.p3 { left: 70%; animation: swim-b 18s 1s infinite; width: 70px; }
+.p4 { right: 10%; animation: swim-b 14s 4s infinite; width: 50px; opacity: 0.7; }
 
-.p1 { left: 10%; animation: swimprofile-b 15s infinite; width: 60px; }
-.p2 { left: 40%; animation: swimprofile-b 12s 2s infinite; opacity: 0.7; width: 40px; }
-.p3 { left: 70%; animation: swimprofile-b 18s 1s infinite; width: 70px; }
-.p4 { right: 10%; animation: swimprofile-b 14s 4s infinite; opacity: 0.7; width: 50px; }
-
-@keyframes swimprofile-b {
+@keyframes swim-b {
     0% { transform: translateY(0) scale(0.8); opacity: 0; }
     15% { opacity: 0.7; }
     90% { opacity: 0.7; }
     100% { transform: translateY(-1300px) scale(1.2); opacity: 0; }
 }
 
-@keyframes swimprofile-floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
-
-.swimprofile-bounce:hover {
-    animation: swimprofile-floating 2s ease-in-out infinite;
-}
+.swimprofile-bounce:hover { transform: translateY(-10px); }
