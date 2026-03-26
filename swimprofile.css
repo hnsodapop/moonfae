@@ -1,0 +1,285 @@
+/* --- Container & Layout --- */
+.swimprofile-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    background: #031326 url('https://i.pinimg.com/736x/4b/3f/43/4b3f4361472383735e6c965094ee3edf.jpg') no-repeat center center/cover;
+    padding: 80px 20px 40px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+    font-family: 'Bai Jamjuree', sans-serif;
+    box-sizing: border-box;
+}
+
+.swimprofile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 19, 38, 0.3);
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.swimprofile-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* --- Video Section --- */
+.swimprofile-video-wrapper {
+    display: block;
+    margin: 0 auto;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.swimprofile-video-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.swimprofile-video-inner iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+.swimprofile-frame-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://img2.pic.in.th/-1604244f3b8534896f.png') no-repeat center center/contain;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* --- Navigation & Links --- */
+.swimprofile-nav {
+    margin-top: 40px;
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 25px;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.swimprofile-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    font-weight: 400;
+}
+
+.swimprofile-nav a:hover {
+    color: #89d4ff !important;
+    text-shadow: 0 0 10px #89d4ff;
+    transform: scale(1.05);
+}
+
+.swimprofile-divider {
+    width: 1px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Typography & Elements --- */
+.swimprofile-heart {
+    margin: 40px auto 0;
+    font-size: 45px;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #89d4ff, 0 0 30px #89d4ff;
+    animation: heartbeat 1s infinite ease-in-out;
+    opacity: 0.9;
+}
+
+.swimprofile-subtitle {
+    font-size: 10px;
+    color: #fff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #89d4ff;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.swimprofile-font-cursive {
+    font-family: 'Beth Ellen', cursive;
+    color: #fff;
+}
+
+/* --- Info Cards --- */
+.swimprofile-info-group {
+    margin-top: 60px;
+    text-align: left;
+    color: #fff;
+    padding: 0 30px;
+}
+
+.swimprofile-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    padding: 35px;
+    border-radius: 25px;
+    max-width: 400px;
+    margin-left: auto;
+    text-align: right;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+    cursor: default;
+}
+
+.swimprofile-details {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.swimprofile-details span {
+    color: #89d4ff;
+    font-weight: 600;
+}
+
+.swimprofile-quote {
+    font-size: 15px;
+    margin-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.swimprofile-card-sea {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 25px;
+    margin-bottom: 100px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 180px;
+    transition: transform 0.5s ease;
+    cursor: default;
+}
+
+.swimprofile-character-img {
+    position: absolute;
+    top: -360px;
+    left: -80px;
+    width: 600px;
+    height: auto;
+    z-index: 15;
+    pointer-events: none;
+}
+
+.swimprofile-sea-text {
+    width: 100%;
+    max-width: 420px;
+    text-align: right;
+}
+
+.swimprofile-highlight {
+    font-size: 18px;
+    color: #89d4ff;
+    font-weight: 600;
+}
+
+.swimprofile-caption {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+}
+
+.swimprofile-line {
+    margin-top: 15px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #89d4ff);
+    width: 100%;
+}
+
+.swimprofile-footer {
+    text-align: center;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* --- Bubbles & Animations --- */
+.swimprofile-bubbles-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.swimprofile-bubble {
+    position: absolute;
+    bottom: -100px;
+    opacity: 0.8;
+}
+
+.swimprofile-bubble img {
+    filter: drop-shadow(0 0 5px #89d4ff);
+}
+
+.swimprofile-bubble.b1 { left: 10%; animation: bubble-up 15s infinite; width: 60px; }
+.swimprofile-bubble.b2 { left: 40%; animation: bubble-up 12s 2s infinite; width: 40px; opacity: 0.7; }
+.swimprofile-bubble.b3 { left: 70%; animation: bubble-up 18s 1s infinite; width: 70px; }
+.swimprofile-bubble.b4 { right: 10%; animation: bubble-up 14s 4s infinite; width: 50px; opacity: 0.7; }
+
+@keyframes bubble-up {
+    0% { transform: translateY(0) scale(0.8); opacity: 0; }
+    15% { opacity: 0.7; }
+    90% { opacity: 0.7; }
+    100% { transform: translateY(-1300px) scale(1.2); opacity: 0; }
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    5% { transform: scale(1.15) rotate(5deg); }
+    10% { transform: scale(1); }
+    15% { transform: scale(1.2) rotate(-5deg); }
+    30% { transform: scale(1); }
+}
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.swimprofile-bounce:hover {
+    animation: floating 2s ease-in-out infinite;
+}
