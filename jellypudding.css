@@ -1,0 +1,127 @@
+/* CSS Variables สำหรับเปลี่ยนสีและรูปภาพทุกจุด */
+:root {
+  --jellypudding-bg-card: #ffffff;           /* สีพื้นหลังการ์ดหลัก */
+  --jellypudding-border-card: #f0f0f0;       /* สีเส้นขอบการ์ดหลัก */
+  
+  --jellypudding-text-lastname: #a3cbc4;     /* สีข้อความนามสกุล (Moonfae) */
+  --jellypudding-text-name: #5a4a40;         /* สีข้อความชื่อ (Honeybeel) */
+  --jellypudding-text-content: #666666;      /* สีข้อความเนื้อหาหลัก */
+  
+  --jellypudding-img-border: #ffffff;       /* สีขอบของรูปภาพโปรไฟล์ */
+  --jellypudding-bg-footer: #f1f5f4;         /* สีพื้นหลังแถบด้านล่างสุด (Footer) */
+  --jellypudding-text-footer: #a3cbc4;       /* สีข้อความ Note ด้านล่างสุด */
+  
+  /* ลิงก์รูปภาพต่างๆ */
+  --jellypudding-img-profile1: url('https://i.pinimg.com/control1/736x/7f/17/a9/7f17a99376af6551504ff98b0d5880b2.jpg');
+  --jellypudding-img-profile2: url('https://i.pinimg.com/1200x/6d/c5/ac/6dc5ac526fb2e89879e81d75a56bce50.jpg');
+  --jellypudding-img-profile3: url('https://i.pinimg.com/1200x/4e/57/d3/4e57d39c4277569a4e2b7ac4b3a50889.jpg');
+  --jellypudding-img-footer-icon: url('https://img1.pic.in.th/images/-13.png');
+}
+
+/* สไตล์ควบคุมหน้าตาของการ์ด */
+.jellypudding-main-card {
+  display: inline-block;
+  max-width: 95%;
+  width: 800px;
+  margin: 80px auto 50px auto;
+  position: relative;
+  font-family: 'Bai Jamjuree', 'Sarabun', 'Leelawadee', sans-serif;
+  background: var(--jellypudding-bg-card);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+  border: 1px solid var(--jellypudding-border-card);
+}
+
+.jellypudding-card-body {
+  padding: 40px;
+  text-align: left;
+  position: relative;
+  min-height: 300px;
+}
+
+.jellypudding-header-text {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.jellypudding-text-title-small {
+  font-family: 'Beth Ellen', cursive;
+  font-size: 20px;
+  color: var(--jellypudding-text-lastname);
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.jellypudding-text-title-large {
+  font-family: 'Gaegu', 'Sarabun', cursive;
+  font-size: 50px;
+  color: var(--jellypudding-text-name);
+  font-weight: 700;
+  line-height: 0.8;
+  margin: 0;
+}
+
+.jellypudding-image-container {
+  position: absolute;
+  top: -55px;
+  right: 30px;
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.jellypudding-thumb-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 12px;
+  border: 5px solid var(--jellypudding-img-border);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.jellypudding-content-area {
+  margin-top: 130px;
+  background-image: linear-gradient(#f9f9f9 1px, transparent 1px);
+  background-size: 100% 30px;
+  line-height: 30px;
+  color: var(--jellypudding-text-content);
+  font-size: 16px;
+  padding-top: 10px;
+  font-family: 'Bai Jamjuree', 'Sarabun', sans-serif;
+}
+
+.jellypudding-card-footer {
+  background: var(--jellypudding-bg-footer);
+  padding: 10px 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.jellypudding-footer-icon-img {
+  width: 35px;
+  height: 35px;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.05));
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.jellypudding-footer-text {
+  font-family: 'Gaegu', 'Sarabun', cursive;
+  font-size: 16px;
+  color: var(--jellypudding-text-footer);
+  letter-spacing: 2px;
+}
+
+/* คลาสจับคู่รูปภาพเฉพาะตัว */
+.jellypudding-p1 { background-image: var(--jellypudding-img-profile1); }
+.jellypudding-p2 { background-image: var(--jellypudding-img-profile2); }
+.jellypudding-p3 { background-image: var(--jellypudding-img-profile3); }
+.jellypudding-fi { background-image: var(--jellypudding-img-footer-icon); }
