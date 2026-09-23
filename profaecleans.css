@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@1,400;1,600&family=Montserrat:wght@300;400;500&display=swap');
+
+/* Main Layout & Container */
+.profaeclean-container {
+  width: 100%;
+  min-height: 200vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.profaeclean-card {
+  width: 100%;
+  max-width: 650px;
+  height: 480px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+
+/* Header & Nav */
+.profaeclean-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.profaeclean-nav {
+  display: flex;
+  gap: 12px;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+.profaeclean-nav-item {
+  color: #2c3e2e;
+  font-size: 0.65rem;
+  pointer-events: auto;
+  cursor: default;
+  display: inline-block;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  transition: all 0.4s ease;
+}
+
+.profaeclean-nav-item:hover {
+  letter-spacing: 2px;
+  opacity: 1;
+}
+
+/* Main Content Area */
+.profaeclean-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+.profaeclean-icon-wrapper {
+  color: #fff;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.profaeclean-icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+.profaeclean-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.profaeclean-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #f0f0f0;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Secret Brand-X Trigger & Popup Effects */
+.profaeclean-brand-x-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profaeclean-brand-x {
+  font-weight: 300;
+  color: #2c3e2e;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0.8;
+}
+
+.profaeclean-brand-x-wrapper:hover .profaeclean-brand-x {
+  transform: rotate(90deg);
+  opacity: 1;
+}
+
+.profaeclean-secret-popup-group {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.profaeclean-pop-window {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 280px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.profaeclean-brand-x-wrapper:hover .profaeclean-pop-window {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.profaeclean-win-left {
+  top: calc(50% - 45px);
+  left: calc(50% - 160px);
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.profaeclean-win-right {
+  top: calc(50% + 45px);
+  left: calc(50% + 160px);
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.profaeclean-brand-x-wrapper:hover .profaeclean-win-left,
+.profaeclean-brand-x-wrapper:hover .profaeclean-win-right {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.profaeclean-img-frame {
+  width: 100%;
+  height: 185px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.profaeclean-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profaeclean-secret-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e2e;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  padding: 2px 0;
+}
+
+/* Hover Blur Trigger */
+.profaeclean-card:has(.profaeclean-brand-x-wrapper:hover) .profaeclean-blur-target {
+  filter: blur(6px);
+  opacity: 0.3;
+}
