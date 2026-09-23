@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@1,400;1,600&family=Montserrat:wght@300;400;500&display=swap');
 
-/* Main Layout & Container (ปรับเต็มจอ 9:16) */
+/* Main Layout & Container */
 .profaeclean-container {
-  width: 100vw;
-  min-height: 177.78vw; /* คำนวณจากสัดส่วน 9:16 (16 / 9 * 100vw) */
+  width: 100%;
+  min-height: 200vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .profaeclean-card {
